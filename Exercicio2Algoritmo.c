@@ -1,6 +1,6 @@
 /*Isabella de Góes Santos; Kauã Azevedo Garcia*/
 
-#define ex1
+#define ex3Funcao
 #include "stdio.h"
 
 /*1. Escreva um programa que pergunte a velocidade de um
@@ -152,10 +152,10 @@ menos de 20 anos de empresa: +3%
 de 20 até 30 anos de empresa: +13%
 mais de 30 anos de empresa: +25%
 
-VERSÃO COM FUNÇÃO (Diferente do fluxograma apresentado em sala de aula):
+VERSÃO COM FUNÇÃO (Diferente do fluxograma apresentado em sala de aula):*/
 
-#ifdef ex3
-/*float calcularSalarioAjustado(float salario, int genero, int anos) {
+#ifdef ex3Funcao
+float calcularSalarioAjustado(float salario, int genero, int anos) {
     if (genero == 1) {
         if (anos < 15)
             return salario * 1.05;
@@ -179,35 +179,36 @@ int main() {
     int anos;
 
     do {
-        printf("Digite o salário atual do funcionário (maior que 0): ");
+        printf("Digite o salario atual do funcionario (maior que 0): ");
         scanf("%f", &salario);
         if (salario <= 0) {
-            printf("Valor inválido! O salário deve ser maior que 0.\n");
+            printf("Valor invalido! O salario deve ser maior que 0.\n");
         }
     } while (salario <= 0);
 
     do {
-        printf("Digite o gênero do funcionário (1 para mulher, 2 para homem): ");
+        printf("Digite o genero do funcionario (1 para mulher, 2 para homem): ");
         scanf("%d", &genero);
         if (genero != 1 && genero != 2) {
-            printf("Valor inválido! Insira 1 para mulher ou 2 para homem.\n");
+            printf("Valor invalido! Insira 1 para mulher ou 2 para homem.\n");
         }
     } while (genero != 1 && genero != 2);
 
     do {
-        printf("Digite há quantos anos o funcionário trabalha na empresa: ");
+        printf("Digite ha quantos anos o funcionario trabalha na empresa: ");
         scanf("%d", &anos);
         if (anos <= 0) {
-            printf("Valor inválido! O número de anos deve ser maior que 0.\n");
+            printf("Valor invalido! O numero de anos deve ser maior que 0.\n");
         }
     } while (anos <= 0);
 
     salarioAjustado = calcularSalarioAjustado(salario, genero, anos);
 
-    printf("O novo salário do funcionário será: R$ %.2f\n", salarioAjustado);
+    printf("O novo salario do funcionario sera: R$ %.2f\n", salarioAjustado);
 
     return 0;
-}*/
+}
+#endif
 
 
 #ifdef ex3
